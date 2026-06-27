@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — CLIP-IT!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #f7f5f0;
+      --surface:   #ffffff;
+      --ink:       #1a1814;
+      --ink-muted: #6b6760;
+      --accent:    #2d5a3d;
+      --accent-lt: #e8f0eb;
+      --rule:      #e2dfd8;
+      --serif:     'Fraunces', Georgia, serif;
+      --sans:      'DM Sans', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.75;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--accent);
+      color: #fff;
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+    }
+
+    header .app-label {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 0.75rem;
+    }
+
+    header h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 300;
+      font-style: italic;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      color: #fff;
+    }
+
+    header .meta {
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Layout ── */
+    .page {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 6rem;
+    }
+
+    /* ── ToC ── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .toc-title {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 1rem;
+    }
+
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      display: grid;
+      gap: 0.3rem;
+    }
+
+    .toc li { counter-increment: toc; display: flex; align-items: baseline; gap: 0.5rem; }
+    .toc li::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 0.7rem;
+      color: var(--accent);
+      font-weight: 500;
+      flex-shrink: 0;
+      width: 1.8rem;
+    }
+
+    .toc a {
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.88rem;
+      line-height: 1.4;
+      transition: color 0.15s;
+    }
+    .toc a:hover { color: var(--accent); }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 2.5rem;
+      scroll-margin-top: 1.5rem;
+    }
+
+    section h2 {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    section p { margin-bottom: 0.9rem; font-size: 0.95rem; }
+    section p:last-child { margin-bottom: 0; }
+
+    section ul, section ol {
+      padding-left: 1.2rem;
+      margin-bottom: 0.9rem;
+    }
+
+    section li { font-size: 0.95rem; margin-bottom: 0.35rem; }
+
+    a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+    a:hover { opacity: 0.75; }
+
+    /* ── PostHog / third-party callout ── */
+    .third-party-card {
+      background: var(--accent-lt);
+      border-left: 3px solid var(--accent);
+      border-radius: 2px;
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+    }
+
+    .third-party-card strong {
+      display: block;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .third-party-card p { font-size: 0.9rem; margin-bottom: 0; }
+
+    /* ── Contact block ── */
+    .contact-block {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 1.25rem 1.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .contact-block p { font-size: 0.9rem; margin-bottom: 0.3rem; }
+    .contact-block p:last-child { margin-bottom: 0; }
+
+    /* ── Rights grid ── */
+    .rights-grid {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .right-item {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      padding: 0.7rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .right-item strong { color: var(--accent); }
+
+    /* ── Divider ── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 3rem 0 2rem;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+      padding-bottom: 3rem;
+    }
+
+    footer a { color: var(--ink-muted); }
+
+    @media (max-width: 600px) {
+      header { padding: 3rem 1.5rem 2.5rem; }
+      .page { padding: 2rem 1.25rem 4rem; }
+      .toc { padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="app-label">CLIP-IT!</span>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective date: 9 June 2026</p>
+</header>
+
+<div class="page">
+
+  <!-- Table of Contents -->
+  <nav class="toc" aria-label="Table of contents">
+    <p class="toc-title">Contents</p>
+    <ol>
+      <li><a href="#intro">About this Policy</a></li>
+      <li><a href="#controller">Data Controller Information</a></li>
+      <li><a href="#information">Information We Obtain</a></li>
+      <li><a href="#legal-basis">Legal Basis for Processing</a></li>
+      <li><a href="#cookies">Cookies &amp; Similar Technologies</a></li>
+      <li><a href="#automated">Automated Decision-Making</a></li>
+      <li><a href="#auto-collect">Information Collected Automatically</a></li>
+      <li><a href="#location">Location Data</a></li>
+      <li><a href="#ai">Artificial Intelligence</a></li>
+      <li><a href="#third-parties">Third-Party Access</a></li>
+      <li><a href="#purchases">Purchases &amp; Subscriptions</a></li>
+      <li><a href="#international">International Data Transfers</a></li>
+      <li><a href="#opt-out">Opt-Out Rights</a></li>
+      <li><a href="#retention">Data Retention</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#breach">Data Breach Notification</a></li>
+      <li><a href="#changes">Changes to this Policy</a></li>
+      <li><a href="#gdpr">Your GDPR Rights</a></li>
+      <li><a href="#ccpa">Your California Rights (CCPA/CPRA)</a></li>
+      <li><a href="#consent">Consent</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1 -->
+  <section id="intro">
+    <h2>About this Policy</h2>
+    <p>This privacy policy is applicable to the <strong>CLIP-IT!</strong> app for mobile devices, together with any related services operated by Stijn Pennings (collectively, the "Application"). Stijn Pennings is hereinafter referred to as the "Service Provider".</p>
+  </section>
+
+  <!-- 2 -->
+  <section id="controller">
+    <h2>Data Controller Information</h2>
+    <p>Stijn Pennings acts as the Data Controller responsible for the processing of your personal data.</p>
+    <div class="contact-block">
+      <p><strong>Name:</strong> Stijn Pennings</p>
+      <p><strong>Address:</strong> Atalantaplein 57</p>
+      <p><strong>Email:</strong> <a href="mailto:stijn.c.pennings@gmail.com">stijn.c.pennings@gmail.com</a></p>
+    </div>
+    <p style="margin-top:0.75rem;">For data protection inquiries and to exercise your GDPR rights, please contact the Data Controller using the information above.</p>
+  </section>
+
+  <!-- 3 -->
+  <section id="information">
+    <h2>Information We Obtain and How It Is Used</h2>
+    <p>The Application and related services acquire the information you supply when you download, access, or register for the service. Registration with the Service Provider is not mandatory. However, you might not be able to use some of the features offered by the service unless you register.</p>
+    <p>Where you purchase a subscription through the Application, the Service Provider receives a verified confirmation of your subscription status from Apple via StoreKit. This confirmation does not include any payment card details, bank information, or billing address — those are processed exclusively by Apple. See the <a href="#purchases">Purchases &amp; Subscriptions</a> section for full details.</p>
+    <p>The Service Provider may also use the information you provide to send important information, required notices, and, where permitted by law, marketing communications.</p>
+  </section>
+
+  <!-- 4 -->
+  <section id="legal-basis">
+    <h2>Legal Basis for Processing Your Personal Data</h2>
+    <p>Where the GDPR applies, the Service Provider relies on one or more lawful bases to process your personal data, including:</p>
+    <ul>
+      <li><strong>Contract performance:</strong> processing necessary to provide the Application or fulfil a contract with you.</li>
+      <li><strong>Consent:</strong> where you have given explicit consent to processing, including for marketing, analytics, or optional features. You may withdraw consent at any time without affecting processing that occurred before withdrawal.</li>
+      <li><strong>Legitimate interests:</strong> where processing is necessary for the Service Provider's specific legitimate interests, such as maintaining network and information security, preventing fraud and abuse, or improving the Application's core functionality through analytics, provided those interests are not overridden by your data protection rights or fundamental freedoms.</li>
+      <li><strong>Legal obligation:</strong> to comply with laws or government requests.</li>
+    </ul>
+  </section>
+
+  <!-- 5 -->
+  <section id="cookies">
+    <h2>Cookies and Similar Technologies</h2>
+    <p>The Application or its third-party SDKs may use cookies, SDKs, pixels, and similar technologies to support functionality, analytics, and service delivery. Where required by law, the Service Provider will obtain your consent before using non-essential tracking technologies.</p>
+  </section>
+
+  <!-- 6 -->
+  <section id="automated">
+    <h2>Automated Decision-Making and Profiling</h2>
+    <p>If the Application uses automated decision-making, including profiling, that produces legal effects concerning you or similarly significantly affects you, you have the right to request human review, express your point of view, and contest the decision. Information about the logic involved and the likely consequences of that processing will be provided where required by law.</p>
+  </section>
+
+  <!-- 7 -->
+  <section id="auto-collect">
+    <h2>Information Collected Automatically</h2>
+    <p>In addition, the Application may collect certain information automatically, including, but not limited to, the type of mobile device you use, your mobile device's unique device ID, the IP address of your mobile device, your mobile operating system, the type of mobile Internet browsers you use, and information about the way you use the Application.</p>
+  </section>
+
+  <!-- 8 -->
+  <section id="location">
+    <h2>Location Data</h2>
+    <p>This Application does not gather precise information about the location of your mobile device.</p>
+  </section>
+
+  <!-- 9 -->
+  <section id="ai">
+    <h2>Artificial Intelligence (AI) Technologies</h2>
+    <p>The Application does not use Artificial Intelligence (AI) technologies to process your data or provide features.</p>
+  </section>
+
+  <!-- 10 -->
+  <section id="third-parties">
+    <h2>Third-Party Access to Your Information</h2>
+    <p>Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways described in this privacy statement.</p>
+
+    <div class="third-party-card">
+      <strong>Analytics — PostHog</strong>
+      <p>The Application uses <strong>PostHog</strong> (PostHog, Inc.) for product analytics. PostHog may collect usage data, device information, and identifiers to help the Service Provider understand how the Application is used. PostHog processes this data on servers located within the European Economic Area (EU Cloud). PostHog processes data in accordance with its own privacy policy, available at <a href="https://posthog.com/privacy" target="_blank" rel="noopener">posthog.com/privacy</a>. The Service Provider has entered into a Data Processing Agreement with PostHog as required by GDPR Article 28.</p>
+    </div>
+
+    <div class="third-party-card">
+      <strong>Payments — Apple Inc.</strong>
+      <p>In-app subscription purchases are processed by <strong>Apple Inc.</strong> (One Apple Park Way, Cupertino, CA 95014, USA) through the App Store. Apple acts as the merchant of record and handles all billing, receipts, and payment data. CLIP-IT! only receives a cryptographically verified entitlement signal from Apple via StoreKit indicating whether a subscription is active — no payment card details, bank information, or billing address are ever transmitted to or stored by the Service Provider. Apple's privacy practices are described at <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a>.</p>
+    </div>
+
+    <p>The Service Provider may also disclose your information:</p>
+    <ul>
+      <li>as required by law, such as to comply with a subpoena or similar legal process;</li>
+      <li>when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;</li>
+      <li>with trusted service providers who work on their behalf, do not have an independent use of the information disclosed to them, and have agreed to adhere to the rules set forth in this privacy statement.</li>
+    </ul>
+    <p>Where the GDPR applies, the Service Provider enters into Data Processing Agreements (DPAs) with third-party service providers that process personal data on its behalf, as required by Article 28 of the GDPR.</p>
+  </section>
+
+  <!-- 11 — NEW -->
+  <section id="purchases">
+    <h2>Purchases and Subscriptions</h2>
+    <p>CLIP-IT! offers optional paid subscriptions that unlock additional features within the Application:</p>
+    <ul>
+      <li><strong>CLIP-IT! Pro</strong> — removes export watermarks and increases the monthly export quota, available as a monthly or annual plan.</li>
+      <li><strong>CLIP-IT! Pro Multi</strong> — includes all Pro features and additionally enables multi-camera video exports, available as a monthly or annual plan.</li>
+    </ul>
+    <p>Without a paid subscription, CLIP-IT! provides a limited number of free exports per calendar month. A watermark is applied to exported clips on the free tier. No payment is required to record or play back clips.</p>
+
+    <p><strong>Payment processing.</strong> All payments are processed exclusively by Apple Inc. through the Apple App Store. The Service Provider never receives, accesses, or stores your payment card details, bank information, or billing address. Apple's handling of your payment data is governed by Apple's Privacy Policy at <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a>.</p>
+
+    <p><strong>Subscription status.</strong> The Application receives only a cryptographically verified confirmation of your active subscription tier from Apple via StoreKit. This entitlement signal is used solely to unlock the corresponding features within the app and is not shared with third parties.</p>
+
+    <p><strong>Auto-renewal.</strong> Subscriptions automatically renew at the end of each billing period (monthly or annual) unless cancelled at least 24 hours before the renewal date. Your Apple ID account will be charged for renewal within 24 hours before the current period ends at the price confirmed at time of purchase.</p>
+
+    <p><strong>Managing and cancelling subscriptions.</strong> You can view, change, or cancel your subscription at any time through your Apple ID account settings: <em>Settings → [your name] → Subscriptions</em>. Cancellation takes effect at the end of the current paid period; you retain full access until then.</p>
+
+    <p><strong>Refunds.</strong> Refund requests for App Store purchases must be directed to Apple at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>. The Service Provider has no ability to issue refunds for App Store transactions.</p>
+  </section>
+
+  <!-- 12 -->
+  <section id="international">
+    <h2>International Data Transfers</h2>
+    <p>The Service Provider or its third-party service providers may transfer personal data outside the European Economic Area (EEA). Where such transfers occur, the Service Provider will use an appropriate transfer mechanism required by GDPR Chapter V, including:</p>
+    <ul>
+      <li>Adequacy decisions by the European Commission</li>
+      <li>Standard Contractual Clauses (SCCs) approved by the European Commission</li>
+      <li>Other safeguards or derogations recognized under GDPR Chapter V, including consent where legally permitted</li>
+    </ul>
+    <p>Countries outside the EEA may not provide the same level of data protection as the EEA. Where required by law, the Service Provider will apply appropriate safeguards and obtain any consent required for the transfer.</p>
+    <p>Note: Analytics data processed by PostHog is stored on EU-based servers and does not involve a transfer outside the EEA.</p>
+  </section>
+
+  <!-- 13 -->
+  <section id="opt-out">
+    <h2>Opt-Out Rights</h2>
+    <p>You can stop further collection of information from your mobile device by uninstalling the Application. Uninstalling will stop the Application from collecting data from your device, but it does not automatically delete information that has already been transmitted to the Service Provider or to third parties.</p>
+    <p>To request deletion of your personal data, withdraw consent, or exercise any of your rights, contact the Service Provider at <a href="mailto:stijn.c.pennings@gmail.com">stijn.c.pennings@gmail.com</a>.</p>
+  </section>
+
+  <!-- 14 -->
+  <section id="retention">
+    <h2>Data Retention</h2>
+    <p>The Service Provider retains personal data based on its necessity for the stated purposes:</p>
+    <ul>
+      <li><strong>User Provided Data:</strong> Retained for the duration of your use of the Application plus 12 months thereafter, unless longer retention is required by law.</li>
+      <li><strong>Automatically Collected Data:</strong> Retained for up to 24 months from collection, unless longer retention is required for legal compliance or security purposes.</li>
+      <li><strong>Aggregated and Anonymized Data:</strong> Retained indefinitely as it no longer identifies you.</li>
+      <li><strong>Data required for legal compliance:</strong> Retained as long as required by applicable law.</li>
+    </ul>
+    <p>You have the right to request deletion of your personal data at any time, except where retention is required by law. To do so, contact <a href="mailto:stijn.c.pennings@gmail.com">stijn.c.pennings@gmail.com</a>. The Service Provider will respond within the time required by applicable law. Please note that some User Provided Data may be required for the Application to function properly.</p>
+  </section>
+
+  <!-- 15 -->
+  <section id="children">
+    <h2>Children's Privacy</h2>
+    <p>The Application is not intended for children under 16 years of age, or where a higher age of digital consent is established under applicable law. The Service Provider does not knowingly solicit data from children or market the Application to them.</p>
+    <p>The Service Provider encourages parents and legal guardians to monitor their children's Internet usage and to help enforce this Policy by instructing their children never to provide personally identifiable information through the Application and/or Services without their permission. If you have reason to believe that a child has provided personally identifiable information, please contact the Service Provider at <a href="mailto:stijn.c.pennings@gmail.com">stijn.c.pennings@gmail.com</a> so that the necessary actions can be taken.</p>
+    <p>If you are under 16 years of age, or where a higher age of digital consent is established by applicable law, your parent or guardian must provide consent on your behalf where permitted by law.</p>
+  </section>
+
+  <!-- 16 -->
+  <section id="security">
+    <h2>Security</h2>
+    <p>The Service Provider is committed to safeguarding the confidentiality of your information. The Service Provider implements physical, electronic, and procedural safeguards to protect information it processes and maintains. Access is limited to authorized employees and contractors who need to know that information to operate, develop, or improve the Application. However, no security system can prevent all potential security breaches.</p>
+  </section>
+
+  <!-- 17 -->
+  <section id="breach">
+    <h2>Data Breach Notification</h2>
+    <p>In the event of a personal data breach that poses a risk to your rights and freedoms, the Service Provider will notify the relevant supervisory authority within 72 hours of becoming aware of the breach, as required by applicable law. Where the breach is likely to result in a high risk to your rights and freedoms, the Service Provider will also notify you without undue delay, providing information about the nature of the breach, the categories of data affected, and the measures taken or proposed to address the breach.</p>
+  </section>
+
+  <!-- 18 -->
+  <section id="changes">
+    <h2>Changes to this Privacy Policy</h2>
+    <p>The Service Provider may update this Privacy Policy from time to time. The Service Provider will notify you of material changes by posting the updated Privacy Policy with an effective date. Where required by law, the Service Provider will seek your consent to material changes before they take effect.</p>
+    <p>Previous versions of this Privacy Policy will be maintained and made available upon request by contacting the Service Provider at <a href="mailto:stijn.c.pennings@gmail.com">stijn.c.pennings@gmail.com</a>.</p>
+  </section>
+
+  <!-- 19 -->
+  <section id="gdpr">
+    <h2>Your GDPR Data Protection Rights</h2>
+    <p>Under the GDPR, you have the following rights:</p>
+    <div class="rights-grid">
+      <div class="right-item"><strong>Right of Access</strong> — You can request access to your personal data.</div>
+      <div class="right-item"><strong>Right to Rectification</strong> — You can request correction of inaccurate data.</div>
+      <div class="right-item"><strong>Right to Erasure</strong> — You can request deletion of your personal data (the "right to be forgotten").</div>
+      <div class="right-item"><strong>Right to Restrict Processing</strong> — You can request that the Data Controller limits how they use your data.</div>
+      <div class="right-item"><strong>Right to Data Portability</strong> — You can request a copy of your data in a structured, commonly used, machine-readable format.</div>
+      <div class="right-item"><strong>Right to Object</strong> — You can object to processing based on legitimate interests. You have an absolute right to object to processing for direct marketing purposes at any time.</div>
+      <div class="right-item"><strong>Right to Withdraw Consent</strong> — Where processing is based on your consent, you can withdraw it at any time via the Application's settings or by contacting the Data Controller.</div>
+      <div class="right-item"><strong>Rights Regarding Automated Decision-Making</strong> — You have rights related to automated decisions that affect you.</div>
+    </div>
+    <p style="margin-top:1rem;">If you believe your data protection rights have been violated, you have the right to lodge a complaint with your local Data Protection Authority. Contact details can be found at: <a href="https://edpb.ec.europa.eu/about-edpb/members_en" target="_blank" rel="noopener">edpb.ec.europa.eu</a></p>
+    <p>If you are located in the United Kingdom, you may contact the Information Commissioner's Office at <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>.</p>
+  </section>
+
+  <!-- 20 -->
+  <section id="ccpa">
+    <h2>Your California Privacy Rights (CCPA/CPRA)</h2>
+    <p>If you are a resident of California, the California Consumer Privacy Act (CCPA) and the California Privacy Rights Act (CPRA) provide you with additional rights regarding your personal information:</p>
+    <ul>
+      <li><strong>Right to Know:</strong> You can request disclosure of the categories and specific pieces of personal information collected about you.</li>
+      <li><strong>Right to Delete:</strong> You can request deletion of personal information collected from you, subject to certain exceptions.</li>
+      <li><strong>Right to Correct:</strong> You can request correction of inaccurate personal information.</li>
+      <li><strong>Right to Opt-Out:</strong> You can opt out of the sale or sharing of your personal information for cross-context behavioral advertising.</li>
+      <li><strong>Right to Limit Use of Sensitive Personal Information:</strong> You can limit the use of your sensitive personal information to essential purposes.</li>
+      <li><strong>Right to Non-Discrimination:</strong> The Service Provider will not discriminate against you for exercising any of your CCPA/CPRA rights.</li>
+    </ul>
+    <p>To exercise any of these rights, please contact the Service Provider at <a href="mailto:stijn.c.pennings@gmail.com">stijn.c.pennings@gmail.com</a>. You may designate an authorized agent to make a request on your behalf.</p>
+  </section>
+
+  <!-- 21 -->
+  <section id="consent">
+    <h2>Consent</h2>
+    <p>Where processing is based on consent, you provide that consent by affirmatively opting in to the relevant feature or action. You may withdraw consent at any time without affecting processing carried out before withdrawal. Processing based on other lawful bases, including contract performance, legitimate interests, or legal obligations, is carried out as described above.</p>
+  </section>
+
+  <!-- 22 -->
+  <section id="contact">
+    <h2>Contact the Data Controller</h2>
+    <p>If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider:</p>
+    <div class="contact-block">
+      <p><strong>Stijn Pennings</strong></p>
+      <p>Atalantaplein 57, 2288HJ Rijswijk, The Netherlands</p>
+      <p><a href="mailto:stijn.c.pennings@gmail.com">stijn.c.pennings@gmail.com</a></p>
+    </div>
+    <p style="margin-top:0.75rem;">The Service Provider will respond within one month of receiving your request, extendable by up to two months where necessary due to the complexity or volume of requests, as permitted by applicable law.</p>
+  </section>
+
+  <hr />
+
+  <footer>
+    <p>This privacy policy page was generated with the help of <a href="https://app-privacy-policy-generator.nisrulz.com/" target="_blank" rel="noopener">App Privacy Policy Generator</a>.</p>
+  </footer>
+
+</div>
+</body>
+</html>
